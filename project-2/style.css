@@ -24,6 +24,7 @@ a{
     color: whitesmoke;
     text-shadow: none;
     padding: 5px;
+    text-align: left;
 }
 h2{
     text-align: center;
@@ -41,16 +42,20 @@ section{
 }
 img{
     width: 30%;
-    margin: 10px 300px 30px 320px;
+    margin: 10px 300px 30px 280px;
 }
 img:hover{
     width: 50%;
-    margin-left: 240px;
-    margin-right: 300px;
+    margin-left: 195px;
+    margin-right: 270px;
 }
 footer{
     text-align: center;
 }
 html{
     scroll-behavior: smooth;
+}
+#navigation-style{
+    margin: 10px 270px 30px 270px;
+    text-shadow: none;
 }
