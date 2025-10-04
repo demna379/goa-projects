@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Functions</title>
+    <style>
+        body{
+            background-color: black;
+            background: linear-gradient(180deg, rgba(22, 17, 17, 1) 0%, rgba(38, 38, 1, 1) 100%);
+            display: flex;
+            font-family: "Poppins", "Segoe UI", "Helvetica Neue", sans-serif;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: yellow;
+        }
+        div{
+            border: 1px solid yellow;
+            width: 600px;
+            margin-bottom: 25px;
+            padding: 15px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+  <h1>JavaScript Functions</h1>
+
+  <div class="intro">
+    <h2>What is a Function?</h2>
+    <p>
+      In JavaScript, a function is a reusable block of code designed to perform a specific task. 
+      Functions help keep your code organized, make it easier to maintain, and prevent repetition. 
+      Instead of writing the same code multiple times, you can wrap it inside a function and call it whenever needed.
+    </p>
+  </div>
+
+  <div class="history">
+    <h2>When Were Functions Introduced?</h2>
+    <p>
+      Functions have existed in JavaScript since its very first version back in 1995. 
+      They were inspired by functions in other programming languages like C. 
+      Over time, JavaScript functions evolved with new features such as 
+      <strong>arrow functions</strong> (introduced in ES6, 2015), which provide shorter and cleaner syntax.
+    </p>
+  </div>
+
+  <div class="why-use">
+    <h2>Why Are Functions Useful?</h2>
+    <ul>
+      <li><strong>Reusability:</strong> Write code once, use it multiple times.</li>
+      <li><strong>Organization:</strong> Break down complex problems into smaller pieces.</li>
+      <li><strong>Readability:</strong> Code becomes easier to understand and debug.</li>
+      <li><strong>Flexibility:</strong> Functions can take input (parameters) and return output (results).</li>
+    </ul>
+  </div>
+
+  <div class="syntax">
+    <h2>Basic Syntax of a Function</h2>
+    <p>
+      The traditional way to create a function looks like this:
+    </p>
+    <pre>
+function greet(name) {
+  return "Hello, " + name + "!";
+}
+    </pre>
+    <p>
+      You can then call the function like this:
+    </p>
+    <pre>
+console.log(greet("Alex")); // Output: Hello, Alex!
+    </pre>
+  </div>
+
+  <div class="arrow-functions">
+    <h2>Arrow Functions (Modern Syntax)</h2>
+    <p>
+      ES6 introduced arrow functions, which are shorter and more concise:
+    </p>
+    <pre>
+const greet = (name) => "Hello, " + name + "!";
+console.log(greet("Maya")); // Output: Hello, Maya!
+    </pre>
+  </div>
+
+  <div class="conclusion">
+    <h2>Conclusion</h2>
+    <p>
+      Functions are the building blocks of JavaScript programs. 
+      Without them, your code would be messy, repetitive, and hard to maintain. 
+      Learning how to define and use functions effectively is one of the most important steps 
+      in becoming a strong JavaScript developer.
+    </p>
+  </div>
+
+</body>
+</html>

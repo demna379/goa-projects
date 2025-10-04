@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        background-color: rgb(22, 17, 17);
+        background: linear-gradient(180deg, rgba(22, 17, 17, 1) 0%, rgba(38, 38, 1, 1) 100%);
+        font-family: "Poppins", "Segoe UI", "Helvetica Neue", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }        
+    .parent1{
+        width: 600px;
+        border: 1px solid yellow;
+        border-radius: 10px;
+        color: yellow;
+        padding: 10px;
+    }
+    input {
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        transition: 0.2s;
+    }
+    .examples{
+        display: flex;
+        margin: 10px 0 0 0;
+        li{
+            position: relative;
+            right: 25px;
+        }
+        .child1,.child2{
+            border: 1px solid yellow;
+            width: 290px;
+            padding: 0 0 15px 15px;
+            text-align: center;
+        }
+        .child1{
+            border-radius: 10px 0 0 10px;
+        }
+        .child2{
+            border-radius: 0 10px 10px 0;
+        }
+        h1,li{
+            color: yellow;
+        }
+        #submit{
+            width: 180px;
+            background-color: yellow;
+            font-size: large;
+            font-weight: 700;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="parent1">
+      <h2>JavaScript if...else Statement</h2>
+      <p>
+        The if...else statement in JavaScript lets you make decisions in your code. 
+        It checks a condition (something that can be true or false) and runs different blocks 
+        of code depending on the result.
+      </p>
+
+      <h3>How it works:</h3>
+      <ul>
+        <li><b>if</b> – runs the code inside if the condition is true.</li>
+        <li><b>else</b> – runs if the condition is false.</li>
+        <li><b>else if</b> – lets you check multiple conditions in order.</li>
+      </ul>
+
+      <h3>Why it’s useful:</h3>
+      <p>
+        It allows your program to react to different situations. For example, checking if a user 
+        is logged in, verifying input, or choosing different paths in a game.
+      </p>
+
+      <h3>Fun fact:</h3>
+      <p>
+        Conditional statements like <code>if...else</code> have been part of JavaScript 
+        since its very first version in 1995. They’re borrowed from older programming languages 
+        like C and Java, so if you learn it in JS, you’ll recognize it elsewhere too.
+      </p>
+    </div>
+
+    <div class="examples">
+        <div class="child1">
+            <h1>Examples 1:</h1>
+            <ul>
+                <li>if you fill in all inputs nothing will happen</li>
+                <li>if you dont fill all the inputs it will have yellow shadows</li>
+            </ol>
+        </div>
+        <div class="child2">
+            <h1>Sign Up</h1> <br>            
+            <input type="text" name="name" id="name" placeholder="Enter your name" required> <br><br>
+            <input type="email" name="email" id="email" placeholder="Enter your email" required> <br><br>
+            <input type="password" name="password" id="password" placeholder="Enter your password" required> <br><br>
+            <input type="submit" name="submit" id="submit" value="Finish">            
+        </div>
+    </div>
+
+    <script>
+    document.getElementById('submit').onclick = function() {
+            let name = document.getElementById('name').value;
+            if (name === '') {
+                document.getElementById('name').style.boxShadow = '0 0 20px yellow';
+            } else {
+                document.getElementById('name').style.border = '';
+            }
+            let email = document.getElementById('email').value;
+            if (email === '') {
+                document.getElementById('email').style.boxShadow = '0 0 20px yellow';
+            } else {
+                document.getElementById('email').style.border = '';
+            }
+
+            let password = document.getElementById('password').value;
+            if (password === '') {
+                document.getElementById('password').style.boxShadow = '0 0 20px yellow';
+            } else {
+                document.getElementById('password').style.border = '';
+            }
+      }
+    </script>
+</body>
+</html>

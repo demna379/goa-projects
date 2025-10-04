@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: rgb(22, 17, 17);
+            background: linear-gradient(180deg, rgba(22, 17, 17, 1) 0%, rgba(38, 38, 1, 1) 100%);
+            font-family: "Poppins", "Segoe UI", "Helvetica Neue", sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1{
+            color: rgb(192, 192, 14);
+            padding: 10px 0 0 0;
+        }
+        div{
+            width: 400px;
+            transition: 1.2s;
+            border: 2px solid rgb(147, 175, 25);
+            border-radius: 15px;
+            margin-bottom: 15px;
+            padding: 5px;
+            h3{
+                color: rgb(192, 192, 14);
+                padding: 0 0 0 10px;
+            }
+            p{
+                color: yellow;
+                padding: 0 0 0 10px;
+            }
+        }
+        div:hover{
+            transition: 0.2s;
+            transform: scale(1.1);
+            cursor: pointer;
+            box-shadow: 0 0 20px yellow;
+        }
+    </style>
+</head>    
+<body>    
+    <h1>Pick a Topic to Learn</h1>
+    
+<div onclick="page1()">
+  <h3 id="h3-1">onclick</h3>
+  <p>runs code when you click an element.</p>
+</div>
+
+<div onclick="page2()">
+  <h3 id="h3-2">if-else</h3>
+  <p>lets you run different code depending on a condition.</p>
+</div>
+
+<div onclick="page3()">
+  <h3 id="h3-3">functions</h3>
+  <p>reusable blocks of code you can call anytime.</p>
+</div>
+
+<div onclick="page4()">
+  <h3 id="h3-4">loops</h3>
+  <p>repeat code multiple times automatically.</p>
+</div>
+
+<div onclick="page5()">
+  <h3 id="h3-5">arrays</h3>
+  <p>store multiple values in a single variable.</p>
+</div>
+
+<div onclick="page6()">
+  <h3 id="h3-6">objects</h3>
+  <p>store data in key–value pairs.</p>
+</div>
+
+<div onclick="page7()">
+  <h3 id="h3-7">events</h3>
+  <p>actions in the browser (click, hover, keypress, etc.).</p>
+</div>
+
+<div onclick="page8()">
+  <h3 id="h3-8">DOM</h3>
+  <p>the structure of your webpage that JS can change.</p>
+</div>
+
+<div onclick="page9()">
+  <h3 id="h3-9">variables</h3>
+  <p>containers for storing values (like numbers or text).</p>
+</div>
+
+<div onclick="page10()">
+  <h3 id="h3-10">operators</h3>
+  <p>symbols like +, -, *, == that do operations.</p>
+</div>
+
+    <script>
+        console.log('If someone said paste anything here, \nthen its 100% scam, \ndo not paste here anything');
+        console.log('If someone said paste anything here, \nthen its 100% scam, \ndo not paste here anything');
+        console.log('If someone said paste anything here, \nthen its 100% scam, \ndo not paste here anything');
+
+        function page1() {
+            window.open('js_stuff/on_click.html', '_blank');
+            document.getElementById('h3-1').style.textDecoration = 'line-through';
+        }
+
+        function page2() {
+            window.open('js_stuff/if-else.html', '_blank');
+            document.getElementById('h3-2').style.textDecoration = 'line-through';
+        }
+
+        function page3() {
+            window.open('js_stuff/functions.html', '_blank');
+            document.getElementById('h3-3').style.textDecoration = 'line-through';
+        }
+
+        function page4() {
+            window.open('js_stuff/loops.html', '_blank');
+            document.getElementById('h3-4').style.textDecoration = 'line-through';
+        }
+
+        function page5() {
+            window.open('js_stuff/arrays.html', '_blank');
+            document.getElementById('h3-5').style.textDecoration = 'line-through';
+        }
+
+        function page6() {
+            window.open('js_stuff/objects.html', '_blank');
+            document.getElementById('h3-6').style.textDecoration = 'line-through';
+        }
+
+        function page7() {
+            window.open('js_stuff/events.html', '_blank');
+            document.getElementById('h3-7').style.textDecoration = 'line-through';
+        }
+
+        function page8() {
+            window.open('js_stuff/DOM.html', '_blank');
+            document.getElementById('h3-8').style.textDecoration = 'line-through';
+        }
+
+        function page9() {
+            window.open('js_stuff/variable.html', '_blank');
+            document.getElementById('h3-9').style.textDecoration = 'line-through';
+        }
+
+        function page10() {
+            window.open('js_stuff/operators.html', '_blank');
+            document.getElementById('h3-10').style.textDecoration = 'line-through';
+        }
+    </script>
+    
+    <h4>made by demna maisuri and gevore barambo</h4>
+</body>
+</html>

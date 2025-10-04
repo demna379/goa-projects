@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>yes, im an idiot</title>
+  <style>
+        body{
+        background-color: rgb(22, 17, 17);
+        background: linear-gradient(180deg, rgba(22, 17, 17, 1) 0%, rgba(38, 38, 1, 1) 100%);
+        font-family: "Poppins", "Segoe UI", "Helvetica Neue", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: yellow;
+    }             
+    section{
+        width: 700px;
+        border: 1px solid yellow;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        padding: 25px;
+    }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Understanding JavaScript Arrays</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>What is an Array?</h2>
+      <p>
+        An <strong>array</strong> in JavaScript is a special variable that can hold multiple values at once.
+        Instead of creating multiple variables, you can store them inside an array.
+      </p>
+      <pre><code>
+// Example of an array
+let fruits = ["Apple", "Banana", "Cherry"];
+console.log(fruits); // ["Apple", "Banana", "Cherry"]
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Accessing Array Elements</h2>
+      <p>Arrays use <strong>indexes</strong>, starting at 0, to access elements.</p>
+      <pre><code>
+let colors = ["Red", "Green", "Blue"];
+console.log(colors[0]); // Red
+console.log(colors[1]); // Green
+console.log(colors[2]); // Blue
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Changing Array Elements</h2>
+      <p>You can replace an element using its index.</p>
+      <pre><code>
+let numbers = [1, 2, 3, 4];
+numbers[2] = 99;
+console.log(numbers); // [1, 2, 99, 4]
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Array Properties</h2>
+      <p>The <code>length</code> property shows how many items are in the array.</p>
+      <pre><code>
+let animals = ["Dog", "Cat", "Elephant"];
+console.log(animals.length); // 3
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Array Methods</h2>
+      <h3>1. push()</h3>
+      <p>Adds an item at the end.</p>
+      <pre><code>
+let games = ["Minecraft", "Roblox"];
+games.push("Valorant");
+console.log(games); // ["Minecraft", "Roblox", "Valorant"]
+      </code></pre>
+
+      <h3>2. pop()</h3>
+      <p>Removes the last item.</p>
+      <pre><code>
+let cities = ["Tokyo", "Paris", "New York"];
+cities.pop();
+console.log(cities); // ["Tokyo", "Paris"]
+      </code></pre>
+
+      <h3>3. shift()</h3>
+      <p>Removes the first item.</p>
+      <pre><code>
+let cars = ["BMW", "Tesla", "Audi"];
+cars.shift();
+console.log(cars); // ["Tesla", "Audi"]
+      </code></pre>
+
+      <h3>4. unshift()</h3>
+      <p>Adds an item at the beginning.</p>
+      <pre><code>
+let drinks = ["Water", "Juice"];
+drinks.unshift("Milk");
+console.log(drinks); // ["Milk", "Water", "Juice"]
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Looping Through Arrays</h2>
+      <p>Arrays are often used with loops.</p>
+      <pre><code>
+let sports = ["Football", "Basketball", "Tennis"];
+
+for (let i = 0; i < sports.length; i++) {
+  console.log(sports[i]);
+}
+// Football
+// Basketball
+// Tennis
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Array with forEach()</h2>
+      <p>The <code>forEach()</code> method runs a function for each element.</p>
+      <pre><code>
+let numbers = [10, 20, 30];
+numbers.forEach(function(num) {
+  console.log(num * 2);
+});
+// 20
+// 40
+// 60
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Multi-dimensional Arrays</h2>
+      <p>You can also create arrays inside arrays.</p>
+      <pre><code>
+let matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+];
+console.log(matrix[1][2]); // 6
+      </code></pre>
+    </section>
+  </main>
+</body>
+</html>

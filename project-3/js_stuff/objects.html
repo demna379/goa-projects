@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>random ahh site made by gela maisuradze</title>
+  <style>
+    body{
+        background-color: rgb(22, 17, 17);
+        background: linear-gradient(180deg, rgba(22, 17, 17, 1) 0%, rgba(38, 38, 1, 1) 100%);
+        font-family: "Poppins", "Segoe UI", "Helvetica Neue", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: yellow;
+    }             
+    section{
+        width: 700px;
+        border: 1px solid yellow;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        padding: 25px;
+    }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Understanding JavaScript Objects</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>What is an Object?</h2>
+      <p>
+        In JavaScript, an <strong>object</strong> is a collection of key–value pairs. 
+        Objects allow you to store multiple related pieces of data together in a single structure.
+      </p>
+      <pre><code>
+let person = {
+  name: "Alex",
+  age: 25,
+  job: "Developer"
+};
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Accessing Object Properties</h2>
+      <p>You can access values using dot notation or bracket notation.</p>
+      <pre><code>
+console.log(person.name); // Alex
+console.log(person["age"]); // 25
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Changing Object Properties</h2>
+      <pre><code>
+person.age = 26; // change age
+person["job"] = "Designer"; // change job
+console.log(person);
+// { name: "Alex", age: 26, job: "Designer" }
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Adding and Removing Properties</h2>
+      <pre><code>
+// Add a new property
+person.city = "New York";
+
+// Remove a property
+delete person.job;
+
+console.log(person);
+// { name: "Alex", age: 26, city: "New York" }
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Object Methods</h2>
+      <p>Objects can also contain functions called methods.</p>
+      <pre><code>
+let user = {
+  name: "Maya",
+  greet: function() {
+    return "Hello, " + this.name + "!";
+  }
+};
+
+console.log(user.greet()); // Hello, Maya!
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Looping Through Objects</h2>
+      <p>The <code>for...in</code> loop lets you iterate over properties.</p>
+      <pre><code>
+for (let key in person) {
+  console.log(key + ": " + person[key]);
+}
+// name: Alex
+// age: 26
+// city: New York
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Objects with Arrays</h2>
+      <pre><code>
+let student = {
+  name: "John",
+  grades: [90, 85, 78],
+  average: function() {
+    let sum = 0;
+    for (let g of this.grades) {
+      sum += g;
+    }
+    return sum / this.grades.length;
+  }
+};
+
+console.log(student.average()); // 84.333...
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Nested Objects</h2>
+      <p>Objects can contain other objects as properties.</p>
+      <pre><code>
+let company = {
+  name: "TechCorp",
+  address: {
+    city: "San Francisco",
+    zip: "94105"
+  }
+};
+
+console.log(company.address.city); // San Francisco
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Object.keys() and Object.values()</h2>
+      <pre><code>
+console.log(Object.keys(person)); // ["name", "age", "city"]
+console.log(Object.values(person)); // ["Alex", 26, "New York"]
+      </code></pre>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>End of Objects Lesson 🚀</p>
+  </footer>
+</body>
+</html>

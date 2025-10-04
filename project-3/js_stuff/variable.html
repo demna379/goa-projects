@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>1+1=11</title>
+    <style>
+        body{
+            background-color: black;
+            background: linear-gradient(180deg, rgba(22, 17, 17, 1) 0%, rgba(38, 38, 1, 1) 100%);
+            display: flex;
+            font-family: "Poppins", "Segoe UI", "Helvetica Neue", sans-serif;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: yellow;
+        }
+        section{
+            border: 1px solid yellow;
+            width: 600px;
+            margin-bottom: 25px;
+            padding: 15px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <h1>Understanding JavaScript Variables</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>What is a Variable?</h2>
+      <p>
+        A variable is a container that stores data values. In JavaScript, variables can hold numbers, text, arrays, objects, or even functions.
+      </p>
+    </section>
+
+    <section>
+      <h2>Declaring Variables</h2>
+      <p>You can declare variables using <code>var</code>, <code>let</code>, or <code>const</code>.</p>
+      <pre><code>
+var name = "Alex";    // old way, function-scoped
+let age = 25;         // modern way, block-scoped
+const pi = 3.14159;   // constant, cannot be changed
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Variable Naming Rules</h2>
+      <ul>
+        <li>Names can contain letters, digits, underscores, and dollar signs.</li>
+        <li>Names must start with a letter, underscore (_), or dollar sign ($).</li>
+        <li>Names cannot be reserved keywords like <code>if</code>, <code>function</code>, or <code>var</code>.</li>
+        <li>JavaScript is case-sensitive: <code>age</code> and <code>Age</code> are different variables.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Assigning Values</h2>
+      <p>You can assign or reassign values to variables after declaring them.</p>
+      <pre><code>
+let score = 10;
+score = 20; // value changed
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Types of Variables</h2>
+      <p>Variables can store different types of data:</p>
+      <ul>
+        <li><strong>String:</strong> text, e.g., <code>let name = "Alex";</code></li>
+        <li><strong>Number:</strong> integers or decimals, e.g., <code>let age = 25;</code></li>
+        <li><strong>Boolean:</strong> true or false, e.g., <code>let isOnline = true;</code></li>
+        <li><strong>Array:</strong> list of values, e.g., <code>let fruits = ["Apple","Banana"];</code></li>
+        <li><strong>Object:</strong> key-value pairs, e.g., <code>let person = {name:"Alex", age:25};</code></li>
+        <li><strong>Undefined & Null:</strong> special empty values</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Why Variables Are Useful</h2>
+      <p>
+        Variables let you store and reuse data throughout your program. 
+        You can perform calculations, track information, and dynamically change content.
+      </p>
+    </section>
+
+    <section>
+      <h2>Example of Variables in Action</h2>
+      <pre><code>
+let userName = "Maya";
+let userAge = 30;
+let isMember = true;
+
+console.log("Name:", userName);
+console.log("Age:", userAge);
+console.log("Member:", isMember);
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Summary</h2>
+      <p>
+        Variables are the building blocks of JavaScript. 
+        Understanding how to declare, assign, and use them is essential for any interactive web page or application.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>End of JavaScript Variables Lesson 📄</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Loops</title>       
+  <style>
+    body{
+        background-color: rgb(22, 17, 17);
+        background: linear-gradient(180deg, rgba(22, 17, 17, 1) 0%, rgba(38, 38, 1, 1) 100%);
+        font-family: "Poppins", "Segoe UI", "Helvetica Neue", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: yellow;
+    }             
+    div{
+        width: 700px;
+        border: 1px solid yellow;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        padding: 25px;
+    }
+    
+  </style>
+</head>
+<body>
+  <h1>JavaScript Loops</h1>
+
+  <div class="parent">
+    <h2>What Are Loops?</h2>
+    <p>
+      Loops in JavaScript are programming constructs that allow you to execute a block of code 
+      repeatedly as long as a certain condition is true. Instead of writing repetitive code, 
+      you can use loops to handle tasks like iterating over arrays, repeating actions, 
+      or automating tasks efficiently.
+    </p>
+  </div>
+
+  <div class="history">
+    <h2>History of Loops in JavaScript</h2>
+    <p>
+      Loops have been part of JavaScript since its creation in 1995. Inspired by the C programming 
+      language, JavaScript adopted traditional looping mechanisms like 
+      <code>for</code>, <code>while</code>, and <code>do...while</code>. 
+      Later, as the language evolved, new types of loops were added such as 
+      <code>for...in</code> (to iterate over object properties) and 
+      <code>for...of</code> (introduced in ES6 in 2015 for iterating over iterable objects like arrays and strings).
+    </p>
+  </div>
+
+  <div class="why-use">
+    <h2>Why Are Loops Useful?</h2>
+    <ul>
+      <li><strong>Repetition:</strong> Run the same block of code multiple times without duplication.</li>
+      <li><strong>Efficiency:</strong> Save time and reduce errors by automating tasks.</li>
+      <li><strong>Scalability:</strong> Easily handle large sets of data without manually coding each step.</li>
+      <li><strong>Flexibility:</strong> Different types of loops exist to fit specific use cases.</li>
+    </ul>
+  </div>
+
+  <div class="types">
+    <h2>Types of Loops in JavaScript</h2>
+
+    <div class="for-loop" style="width: 660px;">
+      <h3>1. For Loop</h3>
+      <p>
+        The <code>for</code> loop is the most common loop in JavaScript. It repeats code a specific number of times.
+      </p>
+      <pre>
+for (let i = 0; i < 5; i++) {
+  console.log("Number: " + i);
+}
+      </pre>
+      <p>This loop will output numbers 0 through 4.</p>
+    </div>
+
+    <div class="while-loop" style="width: 660px;">
+      <h3>2. While Loop</h3>
+      <p>
+        The <code>while</code> loop keeps running as long as a condition is true.
+      </p>
+      <pre>
+let i = 0;
+while (i < 5) {
+  console.log("Number: " + i);
+  i++;
+}
+      </pre>
+      <p>This loop works similarly to the <code>for</code> loop but uses a condition directly.</p>
+    </div>
+
+    <div class="do-while-loop" style="width: 660px;">
+      <h3>3. Do...While Loop</h3>
+      <p>
+        The <code>do...while</code> loop runs the code at least once before checking the condition.
+      </p>
+      <pre>
+let i = 0;
+do {
+  console.log("Number: " + i);
+  i++;
+} while (i < 5);
+      </pre>
+      <p>Even if the condition is false initially, the code runs once.</p>
+    </div>
+
+    <div class="for-in-loop" style="width: 660px;">
+      <h3>4. For...In Loop</h3>
+      <p>
+        The <code>for...in</code> loop iterates over the <strong>keys/properties</strong> of an object.
+      </p>
+      <pre>
+const person = {name: "Alex", age: 25, job: "Developer"};
+
+for (let key in person) {
+  console.log(key + ": " + person[key]);
+}
+      </pre>
+      <p>This will print each property name and its value.</p>
+    </div>
+
+    <div class="for-of-loop" style="width: 660px;">
+      <h3>5. For...Of Loop</h3>
+      <p>
+        The <code>for...of</code> loop iterates over <strong>iterable objects</strong> such as arrays, strings, and more.
+      </p>
+      <pre>
+const colors = ["red", "green", "blue"];
+
+for (let color of colors) {
+  console.log(color);
+}
+      </pre>
+      <p>This will output each color in the array.</p>
+    </div>
+  </div>
+
+  <div class="break-continue">
+    <h2>Break and Continue in Loops</h2>
+    <p>
+      Loops can be controlled with <code>break</code> (to stop the loop completely) 
+      and <code>continue</code> (to skip the current iteration and move to the next one).
+    </p>
+    <pre>
+for (let i = 0; i < 10; i++) {
+  if (i === 5) break;
+  console.log(i);
+}
+    </pre>
+    <p>This will print numbers 0 through 4 and stop once it hits 5.</p>
+
+    <pre>
+for (let i = 0; i < 10; i++) {
+  if (i % 2 === 0) continue;
+  console.log(i);
+}
+    </pre>
+    <p>This will only print odd numbers because <code>continue</code> skips even ones.</p>
+  </div>
+
+  <div class="nested-loops">
+    <h2>Nested Loops</h2>
+    <p>
+      You can put loops inside loops. This is useful for handling multi-dimensional arrays or complex tasks.
+    </p>
+    <pre>
+for (let i = 1; i <= 3; i++) {
+  for (let j = 1; j <= 3; j++) {
+    console.log("i=" + i + ", j=" + j);
+  }
+}
+    </pre>
+    <p>This will print all combinations of i and j from 1 to 3.</p>
+  </div>
+
+  <div class="practical-examples">
+    <h2>Practical Examples of Loops</h2>
+    <h3>Example 1: Loop Through an Array</h3>
+    <pre>
+const fruits = ["apple", "banana", "cherry"];
+
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
+    </pre>
+
+    <h3>Example 2: Loop Through a String</h3>
+    <pre>
+const word = "HELLO";
+
+for (let char of word) {
+  console.log(char);
+}
+    </pre>
+
+    <h3>Example 3: Sum of Numbers with a Loop</h3>
+    <pre>
+let sum = 0;
+for (let i = 1; i <= 5; i++) {
+  sum += i;
+}
+console.log("Sum = " + sum); // Output: 15
+    </pre>
+  </div>
+
+  <div class="comparison">
+    <h2>Comparison of Loop Types</h2>
+    <table border="1" cellpadding="8">
+      <tr>
+        <th>Loop Type</th>
+        <th>Best For</th>
+        <th>Introduced</th>
+      </tr>
+      <tr>
+        <td>for</td>
+        <td>Repeating a fixed number of times</td>
+        <td>1995 (Original JS)</td>
+      </tr>
+      <tr>
+        <td>while</td>
+        <td>Repeating until condition is false</td>
+        <td>1995 (Original JS)</td>
+      </tr>
+      <tr>
+        <td>do...while</td>
+        <td>Run at least once before condition check</td>
+        <td>1995 (Original JS)</td>
+      </tr>
+      <tr>
+        <td>for...in</td>
+        <td>Iterating over object properties</td>
+        <td>1997 (ES1)</td>
+      </tr>
+      <tr>
+        <td>for...of</td>
+        <td>Iterating over iterable objects</td>
+        <td>2015 (ES6)</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="conclusion">
+    <h2>Conclusion</h2>
+    <p>
+      Loops are a fundamental part of programming in JavaScript. They let you repeat tasks, 
+      handle large data sets, and automate processes efficiently. Whether you’re using a 
+      <code>for</code> loop to run something a specific number of times, a 
+      <code>while</code> loop to keep going until a condition is met, or a 
+      <code>for...of</code> loop to iterate through an array, mastering loops is 
+      essential for becoming a skilled JavaScript developer.
+    </p>
+  </div>
+</body>
+</html>

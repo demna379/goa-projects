@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: "Poppins", "Segoe UI", "Helvetica Neue", sans-serif;
+            background-image: url(image-removebg-preview.png);
+            background-color: rgb(22, 17, 17);
+            background: linear-gradient(180deg, rgba(22, 17, 17, 1) 0%, rgba(38, 38, 1, 1) 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            flex-wrap: wrap;
+        }
+        h1{
+            color: rgb(192, 192, 14);
+        }
+        .parent{
+            text-align: center;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            position: absolute;
+        }
+        input {
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+        #submit{
+            width: 180px;
+            background-color: rgb(192, 192, 14);
+            font-size: large;
+            font-weight: 700;
+            color: rgb(22, 17, 17);
+        }
+        .child1, .child2{
+            border: 2px solid rgb(192, 192, 14);
+            width: 300px;
+            height: 400px;
+        }
+        .child1{
+            border-radius: 15px 0 0 15px;
+            h3{
+                color: yellow;
+            }
+            text-align: center;
+        }
+        .child2{
+            border-radius: 0 15px 15px 0;
+        }
+        #image {
+            background-image: url(image-removebg-preview.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 800px;
+            width: 800px;
+            opacity: 0.08;
+            position: relative;
+            right: 310px;
+            bottom: 100px;
+        }
+        @media (max-width: 600px) {
+            body{
+                overflow: visible;
+                height: 150vh;
+            }
+            .parent{
+                display: flex;
+                flex-direction: column;
+            }
+            .child1{
+                border-radius: 15px 15px 0 0;
+            }
+            .child2{
+                border-radius: 0 0 15px 15px;
+            }
+            #image{
+                background-image: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="image"></div>
+    <div class="parent">
+        <div class="child1">
+            <h1>hello everyone</h1>
+            <h3>today you will learn about javascript, what its used <br>for and why you should learn it. <br> but first you have to sign in.</h3>
+        </div>
+        <div class="child2">
+            <form action="homepage.html">
+                <h1>Sign Up</h1> <br>
+                <input type="text" name="name" id="name" placeholder="Enter your name" required> <br><br>
+                <input type="email" name="email" id="email" placeholder="Enter your email" required> <br><br>
+                <input type="password" name="password" id="password" placeholder="Enter your password" required> <br><br>
+                <input type="submit" name="submit" id="submit" value="Finish">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('submit').onclick = function() {
+            let name = document.getElementById('name').value;
+            if (name === '') {
+                document.getElementById('name').style.background = 'red';
+            } else {
+                document.getElementById('name').style.border = '';
+            }
+            let email = document.getElementById('email').value;
+            if (email === '') {
+                document.getElementById('email').style.background = 'red';
+            } else {
+                document.getElementById('email').style.border = '';
+            }
+
+            let password = document.getElementById('password').value;
+            if (password === '') {
+                document.getElementById('password').style.background = 'red';
+            } else {
+                document.getElementById('password').style.border = '';
+            }
+
+            if (password == "rick") {
+                window.open("https://www.youtube.com/watch?v=xvFZjo5PgG0&list=RDxvFZjo5PgG0&start_radio=1", "_blank");
+            }
+            if (name !== "" && email !== "" && password !== "") {
+                window.open("homepage.html", "_self");
+            }   
+        }
+    </script>
+</body>
+</html>

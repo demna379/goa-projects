@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Events</title>
+  <style>
+    body{
+        background-color: rgb(22, 17, 17);
+        background: linear-gradient(180deg, rgba(22, 17, 17, 1) 0%, rgba(38, 38, 1, 1) 100%);
+        font-family: "Poppins", "Segoe UI", "Helvetica Neue", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: yellow;
+    }             
+    section{
+        width: 700px;
+        border: 1px solid yellow;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        padding: 25px;
+    }
+    
+  </style>
+<body>
+  <header>
+    <h1>JavaScript and the DOM</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>What is the DOM?</h2>
+      <p>
+        The DOM (Document Object Model) is a representation of the HTML structure of a webpage. 
+        It allows JavaScript to read and manipulate content, structure, and style.
+      </p>
+    </section>
+
+    <section>
+      <h2>Elements in the DOM</h2>
+      <p>The DOM represents every HTML element as a node that can be accessed and changed.</p>
+      <pre><code>
+&lt;h1&gt;Hello&lt;/h1&gt; 
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+      </code></pre>
+      <p>Each of these elements is a node in the DOM tree.</p>
+    </section>
+
+    <section>
+      <h2>DOM Tree</h2>
+      <p>
+        The DOM is structured like a tree: the &lt;html&gt; element is the root, &lt;head&gt; and &lt;body&gt; are branches, 
+        and all other elements are child nodes.
+      </p>
+      <pre><code>
+html
+ ├── head
+ └── body
+     ├── h1
+     └── p
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Attributes</h2>
+      <p>Elements can have attributes, which provide extra information.</p>
+      <pre><code>
+&lt;img src="image.jpg" alt="A picture"&gt;
+&lt;a href="https://example.com"&gt;Link&lt;/a&gt;
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Classes and IDs</h2>
+      <p>
+        Classes and IDs are used to identify elements in the DOM. IDs should be unique, while multiple elements can share a class.
+      </p>
+      <pre><code>
+&lt;div id="header"&gt;Header&lt;/div&gt;
+&lt;div class="menu"&gt;Item 1&lt;/div&gt;
+&lt;div class="menu"&gt;Item 2&lt;/div&gt;
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Nested Elements</h2>
+      <p>Elements can be inside other elements, forming a nested structure.</p>
+      <pre><code>
+&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Text Nodes</h2>
+      <p>Even the text inside elements is considered a node in the DOM.</p>
+      <pre><code>
+&lt;p&gt;Hello, world!&lt;/p&gt;
+      </code></pre>
+      <p>Here "Hello, world!" is a text node inside the &lt;p&gt; element.</p>
+    </section>
+
+    <section>
+      <h2>Why the DOM is Important</h2>
+      <p>
+        JavaScript interacts with the DOM to make webpages dynamic. You can:
+      </p>
+      <ul>
+        <li>Change content</li>
+        <li>Modify attributes</li>
+        <li>Insert or remove elements</li>
+        <li>React to user actions</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Common DOM Elements</h2>
+      <p>Here are some examples of elements you'll find in the DOM:</p>
+      <ul>
+        <li>&lt;div&gt;, &lt;span&gt;, &lt;p&gt;, &lt;h1&gt; to &lt;h6&gt;</li>
+        <li>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</li>
+        <li>&lt;img&gt;, &lt;a&gt;</li>
+        <li>&lt;input&gt;, &lt;form&gt;, &lt;button&gt;</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Summary</h2>
+      <p>
+        The DOM is a powerful way to represent HTML so that scripts can interact with web pages. 
+        Understanding it is key to manipulating content, handling events, and making your site interactive.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>End of DOM Lesson 📄</p>
+  </footer>
+</body>
+</html>
