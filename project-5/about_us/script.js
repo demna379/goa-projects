@@ -1,0 +1,20 @@
+let boolean = true
+document.getElementById('menu').addEventListener('click', () => {
+    if (boolean === true) {
+        document.getElementById('box').style.transform = 'translate(40px)'
+        document.getElementById('box').style.transition = '1s'
+        document.getElementById('first_div').style.transform = 'translate(-70px)'
+        document.getElementById('first_div').style.transition = '1s'
+        document.getElementById('menu').style.transform = 'translate(-50px)'
+        document.getElementById('menu').style.transition = '1s'
+        boolean = false
+    }
+    else if (boolean === false) {
+        document.getElementById('box').style.transform = 'translate(400px)'
+        document.getElementById('box').style.transition = '1s'
+        document.getElementById('first_div').style.transform = 'translate(0px)'
+        document.getElementById('menu').style.transform = 'translate(0px)'
+        boolean = true
+        console.log('demna')
+    }
+})
